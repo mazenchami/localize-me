@@ -1,4 +1,8 @@
-# Welcome to your Expo app 👋
+# Localize Me 👋
+
+Welcome to the repo for Localize Me, a mobile app that helps you learn new languages by translating your favorite songs. This project was created for my [2024 React Universe Conf](https://www.reactuniverseconf.com/) talk called `Lost in Translation? Turning Babel into Brilliance` hosted by [Callstack](https://www.callstack.com/).
+
+Apps aren’t always confined to one country or language. And if you’re already doing all the work of building out a whole app, why not expand your user base to the millions of non-English speakers? In this session I’ll show how internationalization (i18n) is more than just replacing translation strings, making your app accessible to a global audience, including the often-overlooked 750 million speakers of right-to-left (RTL) languages like Arabic, Hebrew, and Urdu. I’ll show you practical steps, compare the different i18n libraries, and talk about success stories — such as when my mom helped me translate our Ignite boilerplate project to Arabic. You’ll walk away with confidence and tools to expand your user base and stand out.
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
@@ -7,13 +11,25 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 1. Install dependencies
 
    ```bash
-   npm install
+    yarn
    ```
 
-2. Start the app
+2. Run Expo Prebuild
 
    ```bash
-    npx expo start
+    yarn prebuild
+   ```
+
+3. Start the app
+
+   ```bash
+    yarn start
+   ```
+
+4. Run the app
+
+   ```bash
+    yarn {ios/android}
    ```
 
 In the output, you'll find options to open the app in a
@@ -21,7 +37,6 @@ In the output, you'll find options to open the app in a
 - [development build](https://docs.expo.dev/develop/development-builds/introduction/)
 - [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
@@ -30,7 +45,7 @@ You can start developing by editing the files inside the **app** directory. This
 When you're ready, run:
 
 ```bash
-npm run reset-project
+yarn run reset-project
 ```
 
 This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
