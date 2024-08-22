@@ -5,6 +5,8 @@ import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { useTranslation } from 'react-i18next';
+import { isRTL } from '@/i18n/i18next';
+import type { TextStyle } from 'react-native';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -26,14 +28,16 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="(explore)"
         options={{
           title: t("exploreTab:title"),
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} style={$iconRtl} />
           ),
         }}
       />
     </Tabs>
   );
 }
+
+const $iconRtl: TextStyle = isRTL ? { transform: [{ scaleX: -1 }] } : {};
