@@ -1,6 +1,7 @@
 import { Text, type TextProps, StyleSheet } from 'react-native';
 
 import { useThemeColor } from '@/hooks/useThemeColor';
+import { isRTL } from '@/i18n/i18next';
 
 export type ThemedTextProps = TextProps & {
   lightColor?: string;
@@ -26,6 +27,7 @@ export function ThemedText({
         type === 'defaultSemiBold' ? styles.defaultSemiBold : undefined,
         type === 'subtitle' ? styles.subtitle : undefined,
         type === 'link' ? styles.link : undefined,
+        styles.rtl,
         style,
       ]}
       {...rest}
@@ -57,4 +59,5 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#0a7ea4',
   },
+  rtl: isRTL ? { writingDirection: 'rtl' } : {},
 });
