@@ -8,7 +8,17 @@ export default function Layout() {
   const { t } = useTranslation(["exploreTab"]);
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <Drawer>
+      <Drawer
+        screenOptions={{
+          drawerLabelStyle: isRTL ? { writingDirection: "rtl" } : {},
+          headerLeftContainerStyle: isRTL
+            ? {
+                transform: [{ scaleX: -1 }],
+                alignItems: "flex-end",
+              }
+            : {},
+        }}
+      >
         <Drawer.Screen
           name="explore"
           options={{
