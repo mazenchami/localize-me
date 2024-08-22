@@ -14,7 +14,10 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.mazenchami.localizeme"
+      "bundleIdentifier": "com.mazenchami.localizeme",
+      "infoPlist": {
+        "CFBundleAllowMixedLocalizations": true
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -31,6 +34,10 @@
     "plugins": ["expo-router", "expo-localization"],
     "experiments": {
       "typedRoutes": true
+    },
+    "locales": {
+      "en": "./i18n/locales/enNative.json",
+      "ar": "./i18n/locales/arNative.json"
     }
   }
 }
