@@ -32,7 +32,9 @@ export default function Layout() {
           options={{
             drawerLabel: t("showcaseScreen:title"),
             title: t("showcaseScreen:title"),
-            drawerIcon: ({ color }) => <Ionicons name="code" color={color} />,
+            drawerIcon: ({ color }) => (
+              <Ionicons name="briefcase" color={color} />
+            ),
           }}
         />
       </Drawer>
