@@ -5,7 +5,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { isRTL } from "@/i18n/i18next";
 
 export default function Layout() {
-  const { t } = useTranslation(["exploreTab"]);
+  const { t } = useTranslation(["exploreTab", "showcaseScreen"]);
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Drawer
@@ -22,8 +22,16 @@ export default function Layout() {
         <Drawer.Screen
           name="explore"
           options={{
-            drawerLabel: t("title"),
-            title: t("title"),
+            drawerLabel: t("exploreTab:title"),
+            title: t("exploreTab:title"),
+            drawerIcon: ({ color }) => <Ionicons name="code" color={color} />,
+          }}
+        />
+        <Drawer.Screen
+          name="showcase"
+          options={{
+            drawerLabel: t("showcaseScreen:title"),
+            title: t("showcaseScreen:title"),
             drawerIcon: ({ color }) => <Ionicons name="code" color={color} />,
           }}
         />

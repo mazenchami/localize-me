@@ -2,6 +2,10 @@ import { Translations } from "./en";
 
 const ar: Translations = {
   common: {},
+  showcaseScreen: {
+    title: "معرض",
+    placeholder: "اكتب هنا",
+  },
   exploreTab: {
     title: "يستكشف",
     subtitle: "يتضمن هذا التطبيق كودًا نموذجيًا لمساعدتك على البدء.",

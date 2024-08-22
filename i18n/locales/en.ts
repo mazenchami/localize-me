@@ -1,5 +1,9 @@
 const en = {
   common: {},
+  showcaseScreen: {
+    title: "Showcase",
+    placeholder: "Type here",
+  },
   exploreTab: {
     title: "Explore",
     subtitle: "This app includes example code to help you get started.",
