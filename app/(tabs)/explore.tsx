@@ -7,13 +7,14 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { Trans, useTranslation } from 'react-i18next';
+import { isRTL } from '@/i18n/i18next';
 
 export default function TabTwoScreen() {
   const { t } = useTranslation(["exploreTab"]);
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
-      headerImage={<Ionicons size={310} name="code-slash" style={styles.headerImage} />}>
+      headerImage={<Ionicons size={310} name="code-slash" style={[styles.headerImage, styles.rtlIcon]} />}>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">{t("title")}</ThemedText>
       </ThemedView>
@@ -135,4 +136,5 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 8,
   },
+  rtlIcon: isRTL ? { transform: [{ scaleX: -1 }] } : {},
 });
