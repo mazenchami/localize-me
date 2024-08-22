@@ -5,6 +5,7 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { Trans, useTranslation } from 'react-i18next';
+import { isRTL } from '@/i18n/i18next';
 
 export default function HomeScreen() {
   const { t } = useTranslation(["homeTab"]);
@@ -14,7 +15,7 @@ export default function HomeScreen() {
       headerImage={
         <Image
           source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
+          style={[styles.reactLogo, styles.rtlLogo]}
         />
       }>
       <ThemedView style={styles.titleContainer}>
@@ -76,4 +77,5 @@ const styles = StyleSheet.create({
     left: 0,
     position: 'absolute',
   },
+  rtlLogo: isRTL ? { transform: [{ scaleX: -1 }] } : {},
 });
