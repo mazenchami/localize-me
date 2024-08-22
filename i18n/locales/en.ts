@@ -3,6 +3,8 @@ const en = {
   showcaseScreen: {
     title: "Showcase",
     placeholder: "Type here",
+    website: "Website: <ref>{{url}}</ref>",
+    nicknames: "Nicknames: {{nicknames}}",
   },
   exploreTab: {
     title: "Explore",

@@ -15,7 +15,7 @@ export const resources = {
 export const defaultNS = "common";
 
 const fallbackLng = "en";
-const lng = getLocales()[0].languageCode ?? "en";
+export const lng = getLocales()[0].languageCode ?? "en";
 
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next

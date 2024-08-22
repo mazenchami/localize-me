@@ -5,6 +5,8 @@ const ar: Translations = {
   showcaseScreen: {
     title: "معرض",
     placeholder: "اكتب هنا",
+    website: "الموقع: <ref>{{url}}</ref>",
+    nicknames: "الألقاب: {{nicknames}}",
   },
   exploreTab: {
     title: "يستكشف",
