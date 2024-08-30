@@ -4,34 +4,40 @@
     "slug": "localize-me",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/app-icon-all.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "resizeMode": "cover",
+      "backgroundColor": "#DACFD8"
     },
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.mazenchami.localizeme",
       "infoPlist": {
         "CFBundleAllowMixedLocalizations": true
-      }
+      },
+      "icon": "./assets/images/app-icon-ios.png"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/images/app-icon-android-adaptive-foreground.png",
+        "backgroundColor": "#DACFD8",
+        "backgroundImage": "./assets/images/app-icon-android-adaptive-background.png"
       },
-      "package": "com.mazenchami.localizeme"
+      "package": "com.mazenchami.localizeme",
+      "icon": "./assets/images/app-icon-android-legacy.png"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/app-icon-web-favicon.png"
     },
-    "plugins": ["expo-router", "expo-localization"],
+    "plugins": [
+      "expo-router",
+      "expo-localization"
+    ],
     "experiments": {
       "typedRoutes": true
     },
