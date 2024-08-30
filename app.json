@@ -7,11 +7,6 @@
     "icon": "./assets/images/app-icon-all.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
-    "splash": {
-      "image": "./assets/images/splash.png",
-      "resizeMode": "cover",
-      "backgroundColor": "#DACFD8"
-    },
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.mazenchami.localizeme",
@@ -36,7 +31,8 @@
     },
     "plugins": [
       "expo-router",
-      "expo-localization"
+      "expo-localization",
+      ["react-native-bootsplash", { "assetsDir": "assets/images/splash" }]
     ],
     "experiments": {
       "typedRoutes": true
@@ -44,6 +40,9 @@
     "locales": {
       "en": "./i18n/locales/enNative.json",
       "ar": "./i18n/locales/arNative.json"
+    },
+    "autolinking": {
+      "exclude": ["expo-splash-screen"]
     }
   }
 }
